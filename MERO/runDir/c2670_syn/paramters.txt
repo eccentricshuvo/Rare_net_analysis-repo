@@ -1,0 +1,73 @@
+==============================================================
+0: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/mero 
+1: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/c2670_syn.v 
+2: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/ 
+3: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/ 
+4: c2670 
+5: comb 
+6: 1 
+7: LEDA 
+8: 1 
+9: 0.2 
+10: 100 
+11: 2 
+12: 1000 
+13: NA 
+14: -1 
+15: 0 
+16: NA 
+17: -1 
+18: 0 
+19: NA 
+20: 0 
+21: 0 
+22: 1 
+23: 0 
+24: 0 
+25: NA 
+26: NA 
+27: 0 
+28: 0 
+29: 0 
+30: ECE 
+31: -1 
+32: NA 
+33: 0 
+34: 0 
+35: 1 
+
+==============================================================
+inputFile              : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/c2670_syn.v
+dumpDir                : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/
+exeDir                 : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/
+moduleName             : c2670
+cktType                : comb
+scanFlag               : 1
+libName                : LEDA
+verboseFlag            : 1
+threshold              : 0.2
+ndetect                : 100
+trigN                  : 2
+trojN                  : 1000
+states                 : 1
+clkN                   : NA
+clkV                   : -1
+wrst                   : 0
+rstN                   : NA
+rstV                   : -1
+tFileFlag              : 0
+tFile                  : NA
+randomness             : 0
+validateTrojansFlag    : 1
+justCov                : 0
+onlyVec                : 0
+inpVecFile             : NA
+libFile                : NA
+justTroj               : 0
+justOptCov             : 0
+postOpt                : 0
+ndetectApp             : -1
+codeBase               : NA
+compareiVeriFlag       : 0
+graphStruct            : 0
+wTmax                  : 1

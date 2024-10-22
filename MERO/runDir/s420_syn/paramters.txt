@@ -1,0 +1,73 @@
+==============================================================
+0: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/mero 
+1: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_11/s420_syn/s420_syn.v 
+2: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_11/s420_syn/ 
+3: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/ 
+4: s420 
+5: seq 
+6: 1 
+7: LEDA 
+8: 1 
+9: 0.2 
+10: 100 
+11: 2 
+12: 1000 
+13: CLK 
+14: 1 
+15: 1 
+16: RST 
+17: 0 
+18: 0 
+19: NA 
+20: 0 
+21: 0 
+22: 1 
+23: 0 
+24: 0 
+25: NA 
+26: NA 
+27: 0 
+28: 0 
+29: 0 
+30: ECE 
+31: -1 
+32: NA 
+33: 0 
+34: 0 
+35: 1 
+
+==============================================================
+inputFile              : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_11/s420_syn/s420_syn.v
+dumpDir                : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_11/s420_syn/
+exeDir                 : /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/
+moduleName             : s420
+cktType                : seq
+scanFlag               : 1
+libName                : LEDA
+verboseFlag            : 1
+threshold              : 0.2
+ndetect                : 100
+trigN                  : 2
+trojN                  : 1000
+states                 : 1
+clkN                   : CLK
+clkV                   : 1
+wrst                   : 1
+rstN                   : RST
+rstV                   : 0
+tFileFlag              : 0
+tFile                  : NA
+randomness             : 0
+validateTrojansFlag    : 1
+justCov                : 0
+onlyVec                : 0
+inpVecFile             : NA
+libFile                : NA
+justTroj               : 0
+justOptCov             : 0
+postOpt                : 0
+ndetectApp             : -1
+codeBase               : NA
+compareiVeriFlag       : 0
+graphStruct            : 0
+wTmax                  : 1

@@ -1,0 +1,62 @@
+TBDpatt_Format (mode=node, model_entity_form=name);
+
+[Define_Sequence test_setup (modeinit);
+
+// set all pins to intial states
+
+   [Pattern ();
+      Event Stim_PI (): 
+         "DLX_CHIPTOP_TEST_ENABLE" = 1
+         "DLX_CHIPTOP_TRST"        = 1
+         "DLX_CHIPTOP_TMS"         = 0
+
+         "DLX_CHIPTOP_TEST_CLOCK"  = 0
+         "DLX_CHIPTOP_SYS_CLK"     = 0
+
+         "DLX_CHIPTOP_RESET"       = 1
+         "DLX_CHIPTOP_TCK"        = 0 ;
+   ]Pattern;
+
+// set TMS low and clock 4 times to reset TAP
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TMS" = 1 ;
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TMS" = 1 ;
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TMS" = 1 ;
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TMS" = 1 ;
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+// set TMS high and clock to move to run-test/idle state
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TMS" = 0 ;
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Stim_PI (): "DLX_CHIPTOP_TRST" = 0 ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+   [Pattern ();
+      Event Pulse   (): "DLX_CHIPTOP_TCK" =+ ;
+   ]Pattern; 
+
+
+]Define_Sequence test_setup;

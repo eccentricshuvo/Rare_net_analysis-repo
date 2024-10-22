@@ -1,0 +1,56 @@
+
+// define fixed pins
+
+assign pin=DLX_CHIPTOP_TEST_ENABLE +TI;
+assign pin=DLX_CHIPTOP_TRST        +TI;
+assign pin=DLX_CHIPTOP_TMS         -TI;
+
+// define shift clocks - RZ clocks
+
+assign pin=DLX_CHIPTOP_TEST_CLOCK  -ES;
+assign pin=DLX_CHIPTOP_SYS_CLK     -ES;
+
+// define non-shift clocks
+
+assign pin=DLX_CHIPTOP_RESET       +SC;
+assign pin=DLX_CHIPTOP_TCK         -SC,-TI;
+
+// define shift-enable signals
+
+assign pin=DLX_CHIPTOP_SE          +SE;
+
+// define scan-in and scan-out ports - numbers are optional
+
+assign pin=DLX_CHIPTOP_DATA[0]     SI;
+assign pin=DLX_CHIPTOP_DATA[1]     SI;
+assign pin=DLX_CHIPTOP_DATA[2]     SI;
+assign pin=DLX_CHIPTOP_DATA[3]     SI;
+assign pin=DLX_CHIPTOP_DATA[4]     SI;
+assign pin=DLX_CHIPTOP_DATA[5]     SI;
+assign pin=DLX_CHIPTOP_DATA[6]     SI;
+assign pin=DLX_CHIPTOP_DATA[7]     SI;
+assign pin=DLX_CHIPTOP_DATA[8]     SI;
+assign pin=DLX_CHIPTOP_DATA[9]     SI;
+assign pin=DLX_CHIPTOP_DATA[10]    SI;
+assign pin=DLX_CHIPTOP_DATA[11]    SI;
+assign pin=DLX_CHIPTOP_DATA[12]    SI;
+assign pin=DLX_CHIPTOP_DATA[13]    SI;
+assign pin=DLX_CHIPTOP_DATA[14]    SI;
+assign pin=DLX_CHIPTOP_DATA[15]    SI;
+
+assign pin=DLX_CHIPTOP_DATA[16]    SO;
+assign pin=DLX_CHIPTOP_DATA[17]    SO;
+assign pin=DLX_CHIPTOP_DATA[18]    SO;
+assign pin=DLX_CHIPTOP_DATA[19]    SO;
+assign pin=DLX_CHIPTOP_DATA[20]    SO;
+assign pin=DLX_CHIPTOP_DATA[21]    SO;
+assign pin=DLX_CHIPTOP_DATA[22]    SO;
+assign pin=DLX_CHIPTOP_DATA[23]    SO;
+assign pin=DLX_CHIPTOP_DATA[24]    SO;
+assign pin=DLX_CHIPTOP_DATA[25]    SO;
+assign pin=DLX_CHIPTOP_DATA[26]    SO;
+assign pin=DLX_CHIPTOP_DATA[27]    SO;
+assign pin=DLX_CHIPTOP_DATA[28]    SO;
+assign pin=DLX_CHIPTOP_DATA[29]    SO;
+assign pin=DLX_CHIPTOP_DATA[30]    SO;
+assign pin=DLX_CHIPTOP_DATA[31]    SO;

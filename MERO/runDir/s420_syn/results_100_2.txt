@@ -1,0 +1,23 @@
+Time(s):  10.747802734375
+==============================================================
+==============================================================
+0. a. Total primary inputs: (20)
+0. b. Pseudo PI: (16)
+0. c. Total inputs: (36)
+0. d. N-detect: (100)
+1. Total Vectors: (296)
+2. Suspect rare nets: 19
+3. Total nets: 138
+4. Valid Trojan Instances: 22 
+5. Triggers Covered: 22 
+6. Trojans Covered: 22 
+7. Trigger Cov(%): 100.000 
+8. Trojan Cov(%): 100.000
+8. Vector file used: /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_11/s420_syn//vector_otg.out
+==============================================================
+a. Graph creation time    : 0.000000 s
+b. Trojan validation time : 0.020000 s
+c. MERO optimization time : 0.000000 s
+d. MERO coverage time     : 0.000000 s
+==============================================================
+Total Execution Time      : 426.000000 s

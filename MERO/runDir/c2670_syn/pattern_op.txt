@@ -1,0 +1,1719 @@
+
+                             Synopsys TestMAX (TM) 
+                                  TetraMAX (R)
+
+               Version V-2023.12-SP5 for linux64 - Jul 19, 2024  
+
+                    Copyright (c) 1996 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+ Tcl mode is on by default. Use -notcl to run in native mode.
+ Executing startup file "/apps/syn/syn/V-2023.12-SP5/admin/setup/tmaxtcl.rc".
+read_netlist /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src//lec25dscc25.v -library
+ Begin reading netlist ( /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/lec25dscc25.v )...
+ End parsing Verilog file /home/UFAD/sudiptaparia/Downloads/mero_v2_1/src/lec25dscc25.v with 0 errors.
+ End reading netlist: #modules=350, top=ip_ffs, #lines=11376, CPU_time=0.03 sec, Memory=2MB
+read_netlist /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/c2670_syn.v
+ Begin reading netlist ( /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/c2670_syn.v )...
+ End parsing Verilog file /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn/c2670_syn.v with 0 errors.
+ End reading netlist: #modules=1, top=c2670, #lines=510, CPU_time=0.00 sec, Memory=0MB
+set_build -nodelete_unused_gates -merge noglobal_tie_propagate
+run_build_model c2670
+ ------------------------------------------------------------------------------
+ Begin build model for topcut = c2670 ...
+ ------------------------------------------------------------------------------
+ There were 14 primitives and 0 faultable pins removed during model optimizations
+ End build model: #primitives=634, CPU_time=0.00 sec, Memory=0MB
+ ------------------------------------------------------------------------------
+ Begin learning analyses...
+ End learning analyses, total learning CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+drc 
+test 
+ ------------------------------------------------------------------------------
+ Begin scan design rules checking...
+ ------------------------------------------------------------------------------
+ Begin simulating test protocol procedures...
+ Test protocol simulation completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin scan chain operation checking...
+ Scan chain operation checking completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin tracing connection cones...
+ Tracing connection cones completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin nonscan rules checking...
+ Nonscan cell summary: #DFF=0  #DLAT=0  #RAM_outs=0  tla_usage_type=none
+ Nonscan rules checking completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin DRC dependent learning...
+ Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.00 sec
+ DRC dependent learning completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ Begin set operation for load unload constant latches...
+ Set operation for load unload constant latches completed, CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+ DRC Summary Report
+ ------------------------------------------------------------------------------
+ No violations occurred during DRC process.
+ Design rules checking was successful, total CPU time=0.00 sec.
+ ------------------------------------------------------------------------------
+set pindata seq_sim_data 
+seq_sim_data
+#run_justification -full_sequential -set { n484 1 } -verbose -store
+#current_net:n484
+run_justification -full_sequential -set { 310 1 } -verbose -store
+ Begin Full-Sequential Justification of XOR 310 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 0
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    87 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI    98 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   110 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 1
+  Force :    PI   122 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n485 0 } -verbose -store
+#current_net:n485
+run_justification -full_sequential -set { 311 0 } -verbose -store
+ Begin Full-Sequential Justification of XOR 311 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 1
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 0
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    84 = 1
+  Force :    PI    86 = 0
+  Force :    PI    87 = 1
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   109 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   121 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n487 0 } -verbose -store
+#current_net:n487
+run_justification -full_sequential -set { 312 0 } -verbose -store
+ Begin Full-Sequential Justification of XNOR 312 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 2
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    90 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   101 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   114 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 1
+  Force :    PI   121 = 1
+  Force :    PI   122 = 1
+  Force :    PI   126 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n708 0 } -verbose -store
+#current_net:n708
+run_justification -full_sequential -set { 313 0 } -verbose -store
+ Begin Full-Sequential Justification of XNOR 313 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 3
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 0
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    84 = 1
+  Force :    PI    85 = 1
+  Force :    PI    86 = 0
+  Force :    PI    87 = 1
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   109 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   121 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n489 0 } -verbose -store
+#current_net:n489
+run_justification -full_sequential -set { 318 0 } -verbose -store
+ Begin Full-Sequential Justification of XOR 318 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 4
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 0
+  Force :    PI    21 = 1
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    84 = 1
+  Force :    PI    85 = 1
+  Force :    PI    86 = 0
+  Force :    PI    87 = 1
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   109 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   121 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n490 0 } -verbose -store
+#current_net:n490
+run_justification -full_sequential -set { 319 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 319 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 5
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    21 = 1
+  Force :    PI    24 = 1
+  Force :    PI    27 = 1
+  Force :    PI    82 = 0
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 1
+  Force :    PI   120 = 1
+  Force :    PI   121 = 1
+  Force :    PI   122 = 1
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n601 1 } -verbose -store
+#current_net:n601
+run_justification -full_sequential -set { 555 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 555 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 6
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    24 = 1
+  Force :    PI    31 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI    86 = 0
+  Force :    PI   121 = 0
+  Force :    PI   134 = 0
+  Force :    PI   135 = 1
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n561 1 } -verbose -store
+#current_net:n561
+run_justification -full_sequential -set { 516 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 516 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 7
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    31 = 0
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n585 1 } -verbose -store
+#current_net:n585
+run_justification -full_sequential -set { 534 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 534 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 8
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    31 = 1
+  Force :    PI    33 = 1
+  Force :    PI    88 = 0
+  Force :    PI    89 = 0
+  Force :    PI    99 = 0
+  Force :    PI   100 = 0
+  Force :    PI   111 = 0
+  Force :    PI   112 = 0
+  Force :    PI   123 = 0
+  Force :    PI   125 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n583 1 } -verbose -store
+#current_net:n583
+run_justification -full_sequential -set { 531 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 531 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 9
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    31 = 0
+  Force :    PI    47 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   135 = 1
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n590 0 } -verbose -store
+#current_net:n590
+run_justification -full_sequential -set { 554 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 554 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 10
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    31 = 0
+  Force :    PI    48 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   135 = 1
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n605 1 } -verbose -store
+#current_net:n605
+run_justification -full_sequential -set { 549 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 549 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 11
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    31 = 1
+  Force :    PI    39 = 1
+  Force :    PI    81 = 1
+  Force :    PI    84 = 0
+  Force :    PI    96 = 0
+  Force :    PI   107 = 0
+  Force :    PI   119 = 0
+  Force :    PI   134 = 0
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n613 0 } -verbose -store
+#current_net:n613
+run_justification -full_sequential -set { 566 0 } -verbose -store
+ Begin Full-Sequential Justification of OR 566 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 12
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    31 = 1
+  Force :    PI    39 = 1
+  Force :    PI    40 = 1
+  Force :    PI    81 = 1
+  Force :    PI    84 = 0
+  Force :    PI    96 = 0
+  Force :    PI   107 = 0
+  Force :    PI   119 = 0
+  Force :    PI   134 = 0
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n615 1 } -verbose -store
+#current_net:n615
+run_justification -full_sequential -set { 567 1 } -verbose -store
+ Begin Full-Sequential Justification of NAND 567 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 13
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    16 = 1
+  Force :    PI    31 = 1
+  Force :    PI    41 = 1
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n619 0 } -verbose -store
+#current_net:n619
+run_justification -full_sequential -set { 568 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 568 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 14
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    11 = 0
+  Force :    PI    16 = 1
+  Force :    PI    31 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   145 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n618 0 } -verbose -store
+#current_net:n618
+run_justification -full_sequential -set { 548 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 548 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 15
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     4 = 0
+  Force :    PI    11 = 0
+  Force :    PI    15 = 0
+  Force :    PI    31 = 1
+  Force :    PI    43 = 1
+  Force :    PI    81 = 1
+  Force :    PI   134 = 0
+  Force :    PI   138 = 0
+  Force :    PI   145 = 0
+  Force :    PI   149 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n641 0 } -verbose -store
+#current_net:n641
+run_justification -full_sequential -set { 501 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 501 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 16
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     2 = 0
+  Force :    PI     5 = 0
+  Force :    PI     7 = 0
+  Force :    PI    11 = 0
+  Force :    PI    13 = 0
+  Force :    PI    16 = 0
+  Force :    PI    40 = 0
+  Force :    PI    41 = 0
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI   130 = 0
+  Force :    PI   134 = 0
+  Force :    PI   136 = 0
+  Force :    PI   139 = 0
+  Force :    PI   141 = 0
+  Force :    PI   145 = 0
+  Force :    PI   147 = 0
+  Force :    PI   150 = 0
+  Force :    PI   152 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n643 1 } -verbose -store
+#current_net:n643
+run_justification -full_sequential -set { 502 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 502 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 17
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     2 = 0
+  Force :    PI     5 = 0
+  Force :    PI     7 = 0
+  Force :    PI    11 = 0
+  Force :    PI    13 = 0
+  Force :    PI    16 = 0
+  Force :    PI    40 = 0
+  Force :    PI    41 = 0
+  Force :    PI    43 = 0
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI   130 = 0
+  Force :    PI   134 = 0
+  Force :    PI   136 = 0
+  Force :    PI   139 = 0
+  Force :    PI   141 = 0
+  Force :    PI   145 = 0
+  Force :    PI   147 = 0
+  Force :    PI   150 = 0
+  Force :    PI   152 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n645 0 } -verbose -store
+#current_net:n645
+run_justification -full_sequential -set { 503 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 503 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 18
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     2 = 0
+  Force :    PI     5 = 0
+  Force :    PI     7 = 0
+  Force :    PI     9 = 1
+  Force :    PI    10 = 0
+  Force :    PI    11 = 0
+  Force :    PI    13 = 0
+  Force :    PI    16 = 0
+  Force :    PI    40 = 0
+  Force :    PI    41 = 0
+  Force :    PI    43 = 0
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI   130 = 0
+  Force :    PI   133 = 0
+  Force :    PI   134 = 0
+  Force :    PI   136 = 0
+  Force :    PI   139 = 0
+  Force :    PI   141 = 0
+  Force :    PI   144 = 0
+  Force :    PI   145 = 0
+  Force :    PI   147 = 0
+  Force :    PI   150 = 0
+  Force :    PI   152 = 0
+  Force :    PI   155 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n647 1 } -verbose -store
+#current_net:n647
+run_justification -full_sequential -set { 504 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 504 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 19
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     2 = 0
+  Force :    PI     5 = 0
+  Force :    PI     7 = 0
+  Force :    PI     9 = 1
+  Force :    PI    10 = 0
+  Force :    PI    11 = 0
+  Force :    PI    13 = 0
+  Force :    PI    14 = 0
+  Force :    PI    15 = 0
+  Force :    PI    16 = 0
+  Force :    PI    40 = 0
+  Force :    PI    41 = 0
+  Force :    PI    43 = 0
+  Force :    PI    44 = 0
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI   130 = 0
+  Force :    PI   133 = 0
+  Force :    PI   134 = 0
+  Force :    PI   136 = 0
+  Force :    PI   139 = 0
+  Force :    PI   141 = 0
+  Force :    PI   144 = 0
+  Force :    PI   145 = 0
+  Force :    PI   147 = 0
+  Force :    PI   150 = 0
+  Force :    PI   152 = 0
+  Force :    PI   155 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n661 0 } -verbose -store
+#current_net:n661
+run_justification -full_sequential -set { 461 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 461 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 20
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    40 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    44 = 1
+  Force :    PI    46 = 1
+  Force :    PI    47 = 1
+  Force :    PI    48 = 1
+  Force :    PI    68 = 1
+  Force :    PI    70 = 1
+  Force :    PI    71 = 1
+  Force :    PI    72 = 1
+  Force :    PI    74 = 1
+  Force :    PI    75 = 1
+  Force :    PI    76 = 1
+  Force :    PI    77 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n679 0 } -verbose -store
+#current_net:n679
+run_justification -full_sequential -set { 482 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 482 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 21
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    33 = 0
+  Force :    PI    37 = 1
+  Force :    PI    39 = 0
+  Force :    PI    82 = 0
+  Force :    PI    89 = 0
+  Force :    PI    94 = 0
+  Force :    PI   100 = 0
+  Force :    PI   105 = 0
+  Force :    PI   112 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   121 = 1
+  Force :    PI   125 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n681 1 } -verbose -store
+#current_net:n681
+run_justification -full_sequential -set { 485 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 485 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 22
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    33 = 0
+  Force :    PI    37 = 1
+  Force :    PI    39 = 0
+  Force :    PI    82 = 0
+  Force :    PI    89 = 0
+  Force :    PI    92 = 0
+  Force :    PI    94 = 0
+  Force :    PI   100 = 0
+  Force :    PI   103 = 0
+  Force :    PI   105 = 0
+  Force :    PI   112 = 0
+  Force :    PI   115 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   121 = 1
+  Force :    PI   125 = 0
+  Force :    PI   127 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n683 0 } -verbose -store
+#current_net:n683
+run_justification -full_sequential -set { 486 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 486 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 23
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    33 = 0
+  Force :    PI    36 = 0
+  Force :    PI    37 = 1
+  Force :    PI    39 = 0
+  Force :    PI    82 = 0
+  Force :    PI    87 = 0
+  Force :    PI    89 = 0
+  Force :    PI    92 = 0
+  Force :    PI    94 = 0
+  Force :    PI    98 = 0
+  Force :    PI   100 = 0
+  Force :    PI   103 = 0
+  Force :    PI   105 = 0
+  Force :    PI   110 = 0
+  Force :    PI   112 = 0
+  Force :    PI   115 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   121 = 1
+  Force :    PI   122 = 0
+  Force :    PI   125 = 0
+  Force :    PI   127 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n684 1 } -verbose -store
+#current_net:n684
+run_justification -full_sequential -set { 487 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 487 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 24
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    32 = 0
+  Force :    PI    33 = 0
+  Force :    PI    36 = 0
+  Force :    PI    37 = 1
+  Force :    PI    39 = 0
+  Force :    PI    82 = 0
+  Force :    PI    87 = 0
+  Force :    PI    89 = 0
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    94 = 0
+  Force :    PI    98 = 0
+  Force :    PI   100 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   105 = 0
+  Force :    PI   110 = 0
+  Force :    PI   112 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   121 = 1
+  Force :    PI   122 = 0
+  Force :    PI   125 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n704 0 } -verbose -store
+#current_net:n704
+run_justification -full_sequential -set { 488 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 488 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 25
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    23 = 0
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    32 = 0
+  Force :    PI    33 = 0
+  Force :    PI    35 = 0
+  Force :    PI    36 = 0
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    82 = 0
+  Force :    PI    85 = 0
+  Force :    PI    87 = 0
+  Force :    PI    88 = 0
+  Force :    PI    89 = 0
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    94 = 0
+  Force :    PI    97 = 0
+  Force :    PI    98 = 0
+  Force :    PI    99 = 0
+  Force :    PI   100 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   105 = 0
+  Force :    PI   108 = 0
+  Force :    PI   110 = 0
+  Force :    PI   111 = 0
+  Force :    PI   112 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   120 = 0
+  Force :    PI   121 = 1
+  Force :    PI   122 = 0
+  Force :    PI   123 = 0
+  Force :    PI   125 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n700 0 } -verbose -store
+#current_net:n700
+run_justification -full_sequential -set { 447 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 447 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 26
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    29 = 1
+  Force :    PI    34 = 1
+  Force :    PI    35 = 1
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    39 = 1
+  Force :    PI    56 = 1
+  Force :    PI    65 = 1
+  Force :    PI    66 = 1
+  Force :    PI    67 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n702 1 } -verbose -store
+#current_net:n702
+run_justification -full_sequential -set { 469 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 469 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 27
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    29 = 1
+  Force :    PI    30 = 1
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    34 = 1
+  Force :    PI    35 = 1
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 1
+  Force :    PI    39 = 1
+  Force :    PI    45 = 1
+  Force :    PI    56 = 1
+  Force :    PI    65 = 1
+  Force :    PI    66 = 1
+  Force :    PI    67 = 1
+  Force :    PI    91 = 1
+  Force :    PI   102 = 1
+  Force :    PI   113 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n703 0 } -verbose -store
+#current_net:n703
+run_justification -full_sequential -set { 470 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 470 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 28
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    23 = 1
+  Force :    PI    29 = 1
+  Force :    PI    30 = 1
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    34 = 1
+  Force :    PI    35 = 1
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 1
+  Force :    PI    39 = 1
+  Force :    PI    45 = 1
+  Force :    PI    56 = 1
+  Force :    PI    65 = 1
+  Force :    PI    66 = 1
+  Force :    PI    67 = 1
+  Force :    PI    91 = 1
+  Force :    PI   102 = 1
+  Force :    PI   113 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n705 1 } -verbose -store
+#current_net:n705
+run_justification -full_sequential -set { 489 1 } -verbose -store
+ Begin Full-Sequential Justification of NAND 489 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 29
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    23 = 0
+  Force :    PI    24 = 1
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    32 = 0
+  Force :    PI    33 = 0
+  Force :    PI    35 = 0
+  Force :    PI    36 = 0
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    67 = 1
+  Force :    PI    82 = 0
+  Force :    PI    84 = 0
+  Force :    PI    85 = 0
+  Force :    PI    87 = 0
+  Force :    PI    88 = 0
+  Force :    PI    89 = 0
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    94 = 0
+  Force :    PI    96 = 0
+  Force :    PI    97 = 0
+  Force :    PI    98 = 0
+  Force :    PI    99 = 0
+  Force :    PI   100 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   105 = 0
+  Force :    PI   107 = 0
+  Force :    PI   108 = 0
+  Force :    PI   110 = 0
+  Force :    PI   111 = 0
+  Force :    PI   112 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 0
+  Force :    PI   120 = 0
+  Force :    PI   121 = 1
+  Force :    PI   122 = 0
+  Force :    PI   123 = 0
+  Force :    PI   125 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n709 0 } -verbose -store
+#current_net:n709
+run_justification -full_sequential -set { 315 0 } -verbose -store
+ Begin Full-Sequential Justification of XNOR 315 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 30
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    20 = 1
+  Force :    PI    24 = 1
+  Force :    PI    82 = 0
+  Force :    PI    89 = 0
+  Force :    PI    90 = 0
+  Force :    PI    92 = 0
+  Force :    PI    93 = 0
+  Force :    PI    94 = 0
+  Force :    PI   100 = 0
+  Force :    PI   101 = 0
+  Force :    PI   103 = 0
+  Force :    PI   104 = 0
+  Force :    PI   105 = 0
+  Force :    PI   112 = 0
+  Force :    PI   114 = 0
+  Force :    PI   115 = 0
+  Force :    PI   116 = 0
+  Force :    PI   117 = 0
+  Force :    PI   119 = 1
+  Force :    PI   120 = 1
+  Force :    PI   121 = 1
+  Force :    PI   122 = 1
+  Force :    PI   123 = 1
+  Force :    PI   125 = 0
+  Force :    PI   126 = 0
+  Force :    PI   127 = 0
+  Force :    PI   128 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n740 1 } -verbose -store
+#current_net:n740
+run_justification -full_sequential -set { 428 1 } -verbose -store
+ Begin Full-Sequential Justification of XNOR 428 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 31
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     4 = 0
+  Force :    PI     7 = 0
+  Force :    PI    11 = 0
+  Force :    PI    15 = 0
+  Force :    PI   130 = 0
+  Force :    PI   134 = 0
+  Force :    PI   138 = 0
+  Force :    PI   141 = 0
+  Force :    PI   145 = 0
+  Force :    PI   149 = 0
+  Force :    PI   152 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n744 1 } -verbose -store
+#current_net:n744
+run_justification -full_sequential -set { 429 1 } -verbose -store
+ Begin Full-Sequential Justification of XOR 429 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 32
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     6 = 0
+  Force :    PI     7 = 0
+  Force :    PI    10 = 1
+  Force :    PI    11 = 0
+  Force :    PI    15 = 1
+  Force :    PI    17 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI   130 = 0
+  Force :    PI   134 = 0
+  Force :    PI   140 = 0
+  Force :    PI   141 = 0
+  Force :    PI   145 = 0
+  Force :    PI   151 = 0
+  Force :    PI   152 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n748 1 } -verbose -store
+#current_net:n748
+run_justification -full_sequential -set { 430 1 } -verbose -store
+ Begin Full-Sequential Justification of XOR 430 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 33
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     6 = 0
+  Force :    PI     7 = 0
+  Force :    PI     9 = 0
+  Force :    PI    10 = 0
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    15 = 1
+  Force :    PI    17 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI   130 = 0
+  Force :    PI   132 = 0
+  Force :    PI   133 = 0
+  Force :    PI   134 = 0
+  Force :    PI   140 = 0
+  Force :    PI   141 = 0
+  Force :    PI   143 = 0
+  Force :    PI   144 = 0
+  Force :    PI   145 = 0
+  Force :    PI   151 = 0
+  Force :    PI   152 = 0
+  Force :    PI   154 = 0
+  Force :    PI   155 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n749 1 } -verbose -store
+#current_net:n749
+run_justification -full_sequential -set { 431 1 } -verbose -store
+ Begin Full-Sequential Justification of XNOR 431 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 34
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI     3 = 0
+  Force :    PI     6 = 0
+  Force :    PI     7 = 0
+  Force :    PI     9 = 0
+  Force :    PI    10 = 1
+  Force :    PI    11 = 0
+  Force :    PI    13 = 1
+  Force :    PI    14 = 0
+  Force :    PI    15 = 1
+  Force :    PI    16 = 1
+  Force :    PI    17 = 0
+  Force :    PI    51 = 1
+  Force :    PI    52 = 1
+  Force :    PI   130 = 0
+  Force :    PI   132 = 0
+  Force :    PI   134 = 0
+  Force :    PI   137 = 0
+  Force :    PI   140 = 0
+  Force :    PI   141 = 0
+  Force :    PI   143 = 0
+  Force :    PI   145 = 0
+  Force :    PI   148 = 0
+  Force :    PI   151 = 0
+  Force :    PI   152 = 0
+  Force :    PI   154 = 0
+  Force :    PI   156 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n757 1 } -verbose -store
+#current_net:n757
+run_justification -full_sequential -set { 184 1 } -verbose -store
+ Begin Full-Sequential Justification of XOR 184 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 35
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    30 = 0
+  Force :    PI    54 = 0
+  Force :    PI    55 = 0
+  Force :    PI    57 = 1
+  Force :    PI    59 = 1
+  Force :    PI    60 = 0
+  Force :    PI    61 = 1
+  Force :    PI    62 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n758 1 } -verbose -store
+#current_net:n758
+run_justification -full_sequential -set { 185 1 } -verbose -store
+ Begin Full-Sequential Justification of XOR 185 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 36
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    29 = 0
+  Force :    PI    30 = 0
+  Force :    PI    54 = 0
+  Force :    PI    55 = 0
+  Force :    PI    57 = 1
+  Force :    PI    58 = 1
+  Force :    PI    59 = 0
+  Force :    PI    60 = 0
+  Force :    PI    61 = 1
+  Force :    PI    62 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n759 1 } -verbose -store
+#current_net:n759
+run_justification -full_sequential -set { 433 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 433 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 37
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    35 = 0
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    40 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    44 = 1
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 1
+  Force :    PI    49 = 1
+  Force :    PI    50 = 1
+  Force :    PI    63 = 1
+  Force :    PI    64 = 0
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n760 0 } -verbose -store
+#current_net:n760
+run_justification -full_sequential -set { 434 0 } -verbose -store
+ Begin Full-Sequential Justification of NAND 434 @ 0 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 38
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    35 = 0
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    40 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    44 = 1
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 1
+  Force :    PI    49 = 1
+  Force :    PI    50 = 1
+  Force :    PI    63 = 1
+  Force :    PI    64 = 0
+  Force :    PI    79 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n761 1 } -verbose -store
+#current_net:n761
+run_justification -full_sequential -set { 435 1 } -verbose -store
+ Begin Full-Sequential Justification of NOR 435 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 39
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    22 = 0
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    35 = 0
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    40 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    44 = 1
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 1
+  Force :    PI    49 = 1
+  Force :    PI    50 = 1
+  Force :    PI    53 = 0
+  Force :    PI    63 = 1
+  Force :    PI    64 = 0
+  Force :    PI    79 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+#run_justification -full_sequential -set { n762 1 } -verbose -store
+#current_net:n762
+run_justification -full_sequential -set { 436 1 } -verbose -store
+ Begin Full-Sequential Justification of AND 436 @ 1 ... store pattern = yes, apply constraints = yes, protect buses = yes
+ Full-Sequential Justification status : SATISFIED
+   pattern values stored in pattern 40
+ Test pattern data : 
+ PERIOD ( op=12 )
+  Force :    PI    22 = 0
+  Force :    PI    32 = 1
+  Force :    PI    33 = 1
+  Force :    PI    35 = 0
+  Force :    PI    36 = 1
+  Force :    PI    37 = 1
+  Force :    PI    38 = 0
+  Force :    PI    39 = 0
+  Force :    PI    40 = 1
+  Force :    PI    41 = 1
+  Force :    PI    43 = 1
+  Force :    PI    44 = 1
+  Force :    PI    46 = 0
+  Force :    PI    47 = 0
+  Force :    PI    48 = 1
+  Force :    PI    49 = 1
+  Force :    PI    50 = 1
+  Force :    PI    53 = 0
+  Force :    PI    63 = 1
+  Force :    PI    64 = 0
+  Force :    PI    79 = 1
+ MEASURE_ALL_POS ( op=3 )
+ END ( op=9 )
+   calling PROOFS ...
+   'set pindata seq_sim_data' to view sim results 
+ time used = 0.00, # backtrack(s) = 0
+report_patterns -internal -all 
+ Pattern 0 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXX0XX XXX00XXX0X XXXX00XXXX 0XXXXX00X1 XX0XXXXX0X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 XXXXXXXX0X X1XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 1 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 0XXX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0X1X01XX XXX00XXXXX XXXX00XXX0 XXXXXX00XX X0XXXXXX0X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 XXXXXXXX10 X1XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 2 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXXXXX 0XX00XXXXX X0XX00XXXX XXXX0X00X1 X11XXX0X0X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 XXXXX0XX11 X1XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 3 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 0XXX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0X1101XX 0X000XXXXX X0X000XXX0 XXXX0000XX X0XXXX000X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 XXXXX0XX10 11XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 4 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 01XX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0X1101XX 0X000XXXXX X0X000XXX0 XXXX0000XX X0XXXX000X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 XXXXX0XX10 11XXXXXXXX XXXXXXX00X X0XX
+ Pattern 5 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 11XX1XX1XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXXXXX 0X000XXXXX X0X000XXXX XXXX0000X1 111XXX000X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 XXXXX0XX11 11XXXXX00X XXXXXXX11X X0XX
+ Pattern 6 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0X1XXXXXX XXXX1XXXXX X0XXXXXXXX XXXXXXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXX0XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XXXXXXXX XXXX01XXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1X0X XXXXXXXXX0 XXXXXXXXXX XXXXXXXXXX 10XX
+ Pattern 7 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0X1XXXXXX XXXXXXXXXX X0XXXXXXXX X1X1XXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX0XXXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1X0X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 8 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X1X1XXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXX00 XXXXXXXXX0 0XXXXXXXXX X00XXXXXXX XXX0X0XXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 11XXXX00XX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 9 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0X1XXXXXX XXXXXXXXXX X0XXXXXXXX XXXXXXX0XX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX01XXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX1X0X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 10 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0X1XXXXXX XXXXXXXXXX X0XXXXXXXX XXXXXXXX0X X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX01XXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX1X0X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 11 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0XXXXXXXX XXXXXXXXXX X1XXXXXXX1 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XX0XXXXX XXXXXX0XXX XXXXXXX0XX XXXXXXXXX0 XXXXXXXXXX XXXX0XXXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 12 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0XXXXXXXX XXXXXXXXXX X1XXXXXXX1 1XXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XX0XXXXX XXXXXX0XXX XXXXXXX0XX XXXXXXXXX0 XXXXXXXXXX XXXX0XXXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 13 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0XXXX1XXX XXXXXXXXXX X1XXXXXXXX X1XXXXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX0XXXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 14 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX X0XXXX1XXX XXXXXXXXXX X1XXXXXXXX X1X1XXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX0XXXXX
+     XXXXX0XXXX XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 10XX
+ Pattern 15 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXX0XXXXX X0XXX0XXXX XXXXXXXXXX X1XXXXXXXX XXX1XXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX X1XXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXX0XXX0X
+     XXXXX0XXX0 XXXXXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 10XX
+ Pattern 16 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XX0XX0X0XX X0X0XX0XXX XXXXXXXXXX XXXXXXXXXX 00XXXX00XX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XXX0X0XX0
+     X0XXX0X0XX 0X0XXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX1X1X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 17 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XX0XX0X0XX X0X0XX0XXX XXXXXXXXXX XXXXXXXXXX 00X0XX00XX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XXX0X0XX0
+     X0XXX0X0XX 0X0XXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX1X1X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 18 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XX0XX0X0X1 00X0XX0XXX XXXXXXXXXX XXXXXXXXXX 00X0XX000X X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XX00X0XX0
+     X0XX00X0XX 0X0XX00
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX111X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 19 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XX0XX0X0X1 00X0000XXX XXXXXXXXXX XXXXXXXXXX 00X00X000X X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XX00X0XX0
+     X0XX00X0XX 0X0XX00
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXX111X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 20 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 11X11X111X XXXXXXXXXX XXXXXXXX1X
+     111X1111XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX0XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 21 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXX0 XXX0XXX1X0 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXXXX0 XXXX0XXXXX 0XXXX0XXXX XX0XXXX0X0 X1XXX0XXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X1XXXX0XX1 X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 22 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXX0 0XX0XXX1X0 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXXXX0 XX0X0XXXXX 0XX0X0XXXX XX0XX0X0X0 X1XXX0X0XX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X1XXXX0XX1 X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 23 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXX0 0XX0XX01X0 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXX0X0 XX0X0XXX0X 0XX0X0XXXX 0X0XX0X0X0 X10XX0X0XX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 X1XXXX0X01 X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 24 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXX0 0X00XX01X0 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXX0X0 0X0X0XXX0X 00X0X0XXXX 0X0X00X0X0 X10XX000XX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 X1XXX00X01 X0XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 25 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XX01XXXX0 0X00X00100 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XX0X000 0X0X0XX000 00X0X0XX0X 000X00X0X0 0100X000XX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 11XXX00001 00XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 26 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 XXXX1111X1 XXXXXXXXXX XXXXXX1XXX XXXXX111XX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 27 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 1X11111111 XXXXX1XXXX XXXXXX1XXX XXXXX111XX
+     XXXXXXXXXX XXXXXXXXXX X1XXXXXXXX XX1XXXXXXX XXX1XXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 28 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXX1XXXXX1 1X11111111 XXXXX1XXXX XXXXXX1XXX XXXXX111XX
+     XXXXXXXXXX XXXXXXXXXX X1XXXXXXXX XX1XXXXXXX XXX1XXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 29 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XX01XXXX0 0X00X00100 XXXXXXXXXX XXXXXXXXXX XXXXXXX1XX
+     XXXXXXXXXX XX0X00X000 0X0X0X0000 00X0X0X00X 000X00X0X0 0100X000XX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 11XXX00001 00XXXXXXXX XXXXXXXXXX X0XX
+ Pattern 30 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX 1XXX1XXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XX0XXXXXX0 0X000XXXXX 00X000XXXX XX0X0000X1 1111X0000X XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 01XXX00111 11XX00XXXX XXXXXXXXXX X0XX
+ Pattern 31 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXX0XX0XX X0XXX0XXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XXX0XXX0X
+     X0XXX0XXX0 XX0XXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 32 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXX00XX 10XXX1X0XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XXX0XXXXX
+     00XXX0XXXX X00XXX0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX10XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 33 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXX00X0 00X1X1X0XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0X000XXXXX
+     00X000XXXX X00X000
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX110X XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 34 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXX0XX00X0 10X10110XX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X11XXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0X0X0XX0XX
+     00X0X0XX0X X00X0X0
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXX100X XXXXXXXXXX XXXXXXXXXX XXXXXX1XXX X0XX
+ Pattern 35 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX 0XXXXXXXXX XXXXXXXXXX XXXX00X1X1 010XXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 36 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXX0 0XXXXXXXXX XXXXXXXXXX XXXX00X110 010XXXXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX X0XX
+ Pattern 37 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XX11X01100 11X11X0011 1XXXXXXXXX XXX10XXXXX
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 X00XXXXXXX X0XX
+ Pattern 38 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XX11X01100 11X11X0011 1XXXXXXXXX XXX10XXXXX
+     XXXXXXXXX1 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXX1 X00XXX1XX1 X0XX
+ Pattern 39 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XX0XXXXXXX XX11X01100 11X11X0011 1XX0XXXXXX XXX10XXXXX
+     XXXXXXXXX1 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX X11XX0XXXX XXXXXXXXXX XXXXXXXXX1 X00XXX1XX1 X0XX
+ Pattern 40 (full_sequential)
+ Time 0: period = 100
+ Time 0: force_all_pis =
+     XXXXXXXXXX XXXXXXXXXX XX0XXXXXXX XX11X01100 11X11X0011 1XX0XXXXXX XXX10XXXXX
+     XXXXXXXXX1 XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX XXXXXXXXXX
+     XXXXXXXXXX XXXXXXX
+ Time 140: measure_all_pos =
+     XXXXXXXXXX XXXXXX1XXX X11XX0XXXX XXXXXXXXXX XXXXXXXXX1 X00XXX1XX1 X0XX
+report_primitives -pis > /home/UFAD/sudiptaparia/Downloads/mero_v2_1/run_13/c2670_syn//tmax_pi.txt
+exit 

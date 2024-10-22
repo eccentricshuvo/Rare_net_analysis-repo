@@ -1,0 +1,7 @@
+==================================
+Total pi: 	5
+Total po: 	6
+Total nets: 	184
+Total cells: 	167
+Total seq cells: 	21
+==================================

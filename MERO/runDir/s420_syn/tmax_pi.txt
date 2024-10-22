@@ -1,0 +1,43 @@
+ gate_id  type  port_name  (behavior_data)
+ -------  ----  -------------------------------
+       0    PI  GND   scanin(_sc1)
+       1    PI  VDD 
+       2    PI  RST 
+       3    PI  CLK   clock(off=1,master)
+       4    PI  C_0 
+       5    PI  C_1 
+       6    PI  C_10 
+       7    PI  C_11 
+       8    PI  C_12 
+       9    PI  C_13 
+      10    PI  C_14 
+      11    PI  C_15 
+      12    PI  C_16 
+      13    PI  C_2 
+      14    PI  C_3 
+      15    PI  C_4 
+      16    PI  C_5 
+      17    PI  C_6 
+      18    PI  C_7 
+      19    PI  C_8 
+      20    PI  C_9 
+      21    PI  P_0 
+scan_cells
+ chain              cell  type     inv   gate#  instance_name (type)
+ -----------------  ----  -------  ---  ------  ------------------------------------
+ _sc1                  0  MASTER    NN     181  DFF_15_Q_reg (dffs1)
+ _sc1                  1  MASTER    NN     182  DFF_5_Q_reg (dffs1)
+ _sc1                  2  MASTER    NN     183  DFF_7_Q_reg (dffs1)
+ _sc1                  3  MASTER    NN     184  DFF_1_Q_reg (dffs1)
+ _sc1                  4  MASTER    NN     185  DFF_13_Q_reg (dffs1)
+ _sc1                  5  MASTER    NN     186  DFF_9_Q_reg (dffs1)
+ _sc1                  6  MASTER    NN     187  DFF_11_Q_reg (dffs1)
+ _sc1                  7  MASTER    NN     188  DFF_12_Q_reg (dffs1)
+ _sc1                  8  MASTER    NN     189  DFF_2_Q_reg (dffs1)
+ _sc1                  9  MASTER    NN     190  DFF_8_Q_reg (dffs1)
+ _sc1                 10  MASTER    NN     191  DFF_0_Q_reg (dffs1)
+ _sc1                 11  MASTER    NN     192  DFF_6_Q_reg (dffs1)
+ _sc1                 12  MASTER    NN     193  DFF_3_Q_reg (dffs1)
+ _sc1                 13  MASTER    NN     194  DFF_4_Q_reg (dffs1)
+ _sc1                 14  MASTER    NN     195  DFF_14_Q_reg (dffs1)
+ _sc1                 15  MASTER    NN     196  DFF_10_Q_reg (dffs1)
