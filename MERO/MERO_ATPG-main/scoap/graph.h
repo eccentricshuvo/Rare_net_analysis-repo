@@ -1137,4 +1137,5 @@ void dumpGraphStr(graph *G, char *dumpDir);
 
 void printEdgArr(array_t *edgArr);
 
+graph* createGraphFromVerilog(char* inputFileName, char* libFileName, char* moduleName, int* primInCnt, graph* rootG, char* libName);
 #endif

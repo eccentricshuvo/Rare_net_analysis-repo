@@ -103,49 +103,49 @@ Link: http://swarup.ece.ufl.edu/
 
 
 /* global variables -  mainly options */
-char*    sisScr;
-int      NDETECT;
-int      SEQSTATES;
-int      NTESTPTS;
-int      maxTests;
-int      NTRIG;
-int      TRIGGER_INSTANCES;
-int      TROJAN_INSTANCES;
-float    TRIGTHRESH;
-float    inputActivity;
-char*    moduleName;
-char*    cktType;
-char*    vectorFile;
-char*    inputFile;
-char*    outFile;
-char*    subckt;
-int      nPrimIn;
-int      maxHierLevel;
-int      globalEqnIdx;
-int      isCombLoop;
-char     keepLog[20];
-float    timeFactor;
-int      areaTolerance;
-// int      fullScan = 1;
-int      delayTolerance;
-float    slackMargin;
-float    slackWindow;
-float    targetDelay;
-int      bDebug;
-int      maxSizeStep;
-int      numSizePerCell;
-int      maxIterationNumber;
-int      nMaxPatterns;
-int      systemVdd;
-int      numStages;
-int      nParallel;
-int      maxNodes;
-int      MAXIN;
-int      MAXOUT;
-int      btopoOrder;
-int      globalVertIdx;
-int      globalEdgIdx;
-int      extraDffIn;
+//char*    sisScr;
+//int      NDETECT;
+//int      SEQSTATES;
+//int      NTESTPTS;
+//int      maxTests;
+//int      NTRIG;
+//int      TRIGGER_INSTANCES;
+//int      TROJAN_INSTANCES;
+//float    TRIGTHRESH;
+//float    inputActivity;
+//char*    moduleName;
+//char*    cktType;
+//char*    vectorFile;
+//char*    inputFile;
+//char*    outFile;
+//char*    subckt;
+//int      nPrimIn;
+//int      maxHierLevel;
+//int      globalEqnIdx;
+//int      isCombLoop;
+//char     keepLog[20];
+//float    timeFactor;
+//int      areaTolerance;
+//// int      fullScan = 1;
+//int      delayTolerance;
+//float    slackMargin;
+//float    slackWindow;
+//float    targetDelay;
+//int      bDebug;
+//int      maxSizeStep;
+//int      numSizePerCell;
+//int      maxIterationNumber;
+//int      nMaxPatterns;
+//int      systemVdd;
+//int      numStages;
+//int      nParallel;
+//int      maxNodes;
+//int      MAXIN;
+//int      MAXOUT;
+//int      btopoOrder;
+//int      globalVertIdx;
+//int      globalEdgIdx;
+//int      extraDffIn;
 
 
 typedef enum direction {INPUT=1, OUTPUT=2} dirType;
@@ -540,7 +540,7 @@ typedef struct edgeSt
    float signalProb1;
    float signalProb0;
    float activity;
-    int globalEdgIdx;
+   int globalEdgIdx;
    int  visitedEdgeFlag;
 
    int atLogic;
@@ -1137,4 +1137,5 @@ void dumpGraphStr(graph *G, char *dumpDir);
 
 void printEdgArr(array_t *edgArr);
 
+graph* createGraphFromVerilog(char* inputFileName, char* libFileName, char* moduleName, int* primInCnt, graph* rootG, char* libName);
 #endif
